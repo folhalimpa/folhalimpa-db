@@ -3,5 +3,5 @@ FROM mysql
 ENV MYSQL_ALLOW_EMPTY_PASSWORD=true
 
 COPY ./hackfestdumps/ /hackfestdumps
-COPY ./bootstrap_database.sh /boostrap_database.sh
+COPY ./bootstrap_database.sh /bootstrap_database.sh
 
