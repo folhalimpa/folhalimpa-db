@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  db:
+    image: fl-db
+    build: .
+    ports:
+      - 3306:3306
+
