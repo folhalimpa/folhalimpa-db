@@ -1,0 +1,26 @@
+<database>
+
+  <name>
+    folha_limpa
+  </name>
+
+  <user>
+    root
+  </user>
+
+  <password>
+  </password>
+
+  <host>
+    127.0.0.1
+  </host>
+
+  <port>
+    3306
+  </port>
+
+  <charset>
+    utf8
+  </charset>
+
+</database>
