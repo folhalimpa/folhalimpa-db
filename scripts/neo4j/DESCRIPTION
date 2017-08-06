@@ -1,0 +1,10 @@
+Package: rfolhalimpa
+Type: Package
+Title: Pacote para carregar as informações de acumulo de cargos do Projeto Folha Limpa (folhalimpa.org)
+Version: 0.1.0
+Author: Equipe Folha Limpa
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: projetofolhalimpa@gmail.com
+License: GPL-3
+Encoding: UTF-8
+LazyData: true

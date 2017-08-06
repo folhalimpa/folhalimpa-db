@@ -16,7 +16,12 @@ O docker construirá uma imagem a partir do `Dockerfile` e depois que o processo
 
 ## Importando dados
 
-O banco de dados MySQL é criado a partir dos dados de folhas de pagamento disponibilizados pelo TCE num arquivo .csv.
-Com esse arquivo em mãos, execute os scripts encontrados no diretório `scripts/` na seguinte ordem:
+O banco de dados MySQL é criado a partir dos dados de [folhas de pagamento dos municípios da Paraíba]("https://dados.tce.pb.gov.br/TCE-PB-SAGRES-Folha_Pessoal_Esfera_Municipal.txt.gz") disponibilizados pelo TCE.
+Com esse arquivo em mãos, execute os scripts encontrados no diretório `scripts/mysql` na seguinte ordem:
 `import_csv_to_mysql.py`, `create_relational_tables_municipios.py`, `create_folhas_municipios_table.py`.
 O arquivo `database.xml` traz algumas configurações do banco de dados utilizado.
+
+Para o Neo4J, o banco de dados é criado usando os dados de folhas de pagamento dos [municípios]("https://dados.tce.pb.gov.br/TCE-PB-SAGRES-Folha_Pessoal_Esfera_Municipal.txt.gz") e do [estado](https://dados.tce.pb.gov.br/TCE-PB-SAGRES-Folha_Pessoal_Esfera_Estadual.txt.gz) da Paraíba.
+Para isso, execute o código R encontrado em `scripts/neo4j` para gerar o arquivo `dadosAcumulados.csv`.
+Esse arquivo é utilizado pelo `cypher`, que deve ser executado dentro do Neo4J para criar o grafo.
+

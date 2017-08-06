@@ -1,0 +1,18 @@
+-- DELETE ALL
+MATCH (x)
+DETACH DELETE x;
+
+
+
+USING PERIODIC COMMIT
+LOAD CSV WITH HEADERS FROM [PATH] AS row FIELDTERMINATOR ','
+CREATE(orgao:Orgao {nome:row.ORGAO})
+CREATE(servidor:Servidor {nome: row.NOME, valores: row.VALOR, cargos: row.CATEGORIA, municipios: row.MUNICIPIO, orgaos: row.ORGAO, remuneracoes: row.n, cpf: row.CPF})
+CREATE(cargo:Cargo {nome: row.CATEGORIA, valor: row.VALOR})
+CREATE(localTrabalho:Municipio {nome: row.MUNICIPIO})
+CREATE(numeroRemuneracoes:Remuneracoes{nremuneracoes: row.n})
+CREATE (servidor)-[:Funcionario]->(orgao)
+CREATE (servidor)-[:Exerce]->(cargo)
+CREATE (servidor)-[:Trabalha]->(localTrabalho)
+CREATE (servidor)-[:PossuiRemuneracoes]->(numeroRemuneracoes)
+
