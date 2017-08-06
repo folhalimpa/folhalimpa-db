@@ -16,7 +16,7 @@ O docker construirá uma imagem a partir do `Dockerfile` e depois que o processo
 
 ## Importando dados
 
-O banco de dados MySQL é criado a partir dos [dados de folhas de pagamento]("https://dados.tce.pb.gov.br/TCE-PB-SAGRES-Folha_Pessoal_Esfera_Municipal.txt.gz") dos municípios da Paraíba disponibilizados pelo TCE.
+O banco de dados MySQL é criado a partir dos [dados de folhas de pagamento](https://dados.tce.pb.gov.br/TCE-PB-SAGRES-Folha_Pessoal_Esfera_Municipal.txt.gz) dos municípios da Paraíba disponibilizados pelo TCE.
 Com esse arquivo em mãos, execute os scripts encontrados no diretório `scripts/mysql` na seguinte ordem:
 `import_csv_to_mysql.py`, `create_relational_tables_municipios.py`, `create_folhas_municipios_table.py`.
 O arquivo `database.xml` traz algumas configurações do banco de dados utilizado.
